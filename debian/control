@@ -1,0 +1,33 @@
+Source: xclip
+Section: x11
+Priority: optional
+Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Uploaders:
+ Boyuan Yang <byang@debian.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ libx11-dev,
+ libxmu-dev,
+ psmisc,
+ xauth,
+ xvfb,
+Rules-Requires-Root: no
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/debian/xclip
+Vcs-Git: https://salsa.debian.org/debian/xclip.git
+Homepage: https://github.com/astrand/xclip
+
+Package: xclip
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ xauth,
+Description: command line interface to X selections
+ xclip is a command line utility that is designed to run on any system with an
+ X11 implementation. It provides an interface to X selections ("the clipboard")
+ from the command line. It can read data from standard in or a file and place
+ it in an X selection for pasting into other X applications. xclip can also
+ print an X selection to standard out, which can then be redirected to a file
+ or another program.
